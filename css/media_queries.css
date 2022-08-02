@@ -1,0 +1,14 @@
+@media (min-width: 768px){
+    form {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    #form_transaction-type, #form_price {
+        width: 25%;
+    }
+
+    #form_product-name {
+        width: 50%;
+    }
+}
