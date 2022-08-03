@@ -1,14 +1,101 @@
 @media (min-width: 768px){
     form {
-        flex-direction: row;
-        flex-wrap: wrap;
+        height: auto;
+        border: 1px solid #979797;
+        border-radius: 4px;
+        padding: 20px;
+        box-sizing: border-box;
     }
 
-    #form_transaction-type, #form_price {
-        width: 25%;
+    .form_title {
+        display: block;
+        text-align: center;
     }
 
-    #form_product-name {
-        width: 50%;
+    .form_inputs_wrapper {
+        display: flex;        
+        column-gap: 20px;
+    }
+
+    .form_input_wrapper {
+        width: 150px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form_product-name_wrapper {
+        flex-grow: 2;
+    }
+
+    .form_add-transaction-btn {
+        width: 200px;
+        align-self: flex-end;
+        margin-bottom: 0;
+    }
+
+    .abstract {
+        margin-bottom: 427px;
+    }
+}
+
+@media (min-width:1112px) {
+    .container {
+        width: 1112px;
+        margin: auto;
+        display: flex;
+        column-gap: 20px;
+    }
+
+    .header {
+        height: 80px;
+    }
+
+    .menu_desktop {
+        display: flex;
+    }
+
+    form {
+        width: 400px;
+        margin-bottom: 352px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .form_inputs_wrapper {
+        flex-direction: column;        
+    }
+
+    .form_input_wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .abstract {
+        width: 652px;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .menu-burguer_btn {
+        display: none;
+    }
+
+    .form_add-transaction-btn {
+        width: 100%;
+    }
+}
+
+@media (min-width:1500px) {
+    .container {
+        width: 1140px;
+    }
+
+    form {
+        margin-bottom: 538px;
+    }
+
+    .abstract {
+        width: 680px;
     }
 }

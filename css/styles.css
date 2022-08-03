@@ -18,13 +18,16 @@ body {
 }
 
 .container{
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 header {
-    height: 60px;
-    background-color:#E0E0E0;    
+    background-color:#E0E0E0;  
+}
+
+.header {
+    height: 60px;  
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -33,14 +36,15 @@ header {
     color: #333333;
 }
 
+
 .logo img {
     width: 30px;
     height: 30px;
-    object-fit: cover;
+    object-fit: contain;
     object-position: center;
 }
 
-.menu-burguer {
+.menu-burguer_btn {
     width: 24px;
     height: 24px;
     background-image: url('../assets/icons/Shape.svg');
@@ -49,18 +53,42 @@ header {
     background-repeat: no-repeat;
 }
 
+.menu_desktop {
+    height: 40px;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 600;
+    color: #333333;
+    background-color: #FFFFFF;
+    display: none;
+}
+
+.menu_desktop_option {
+    padding: 0px 20px 0px 20px;
+    line-height: 19.2px;
+    border-right: 1px solid #979797;
+    text-decoration: none;
+}
+
+.menu_desktop_option:last-child {
+    border: none;
+}
+.menu_desktop_option:visited {
+    color: inherit;
+}
+
 form {
     width: 100%;
     height: 290px;
     display: flex;
     flex-direction: column;
     border-bottom: solid 1px #979797;
+    font-family: Lato Regular;
 }
 
 form label {
     margin-top: 20px;
     margin-bottom: 2px;
-    font-family: Lato Regular;
     font-weight: 400;
     font-size: 14px;
     line-height: 22px;
@@ -105,8 +133,7 @@ form label {
     height: auto;
     margin-top: 20px;
     margin-bottom: 22px;
-    padding-top: 21px;
-    padding-bottom: 34px;
+    padding-top: 21px;    
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -115,10 +142,14 @@ form label {
     font-family: Lato Regular;
 }
 
-.abstract_title {
+.abstract_title, .form_title{
     font-size: 18px;
     font-weight: 700;
     line-height: 22px;
+}
+
+.form_title {
+    display: none;
 }
 
 .abstract_row {

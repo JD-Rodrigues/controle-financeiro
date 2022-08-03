@@ -11,20 +11,39 @@
     <title>Controle financeiro - NewTab</title>
 </head>
 <body>
-    <header class="container">
-        <div class="logo">
-            <img src="./assets/icons/Ellipse 13.svg" alt="Logo do aplicativo de controle financeiro">
-        </div>
-        <div class="name">Controle financeiro</div>
-        <div class="menu-burguer"></div>
+    <header>
+        <div class="container header">
+            <div class="logo">
+                <img src="./assets/icons/Ellipse 13.svg" alt="Logo do aplicativo de controle financeiro">
+            </div>
+            <div class="name">Controle financeiro</div>
+            <div class="menu-burguer_btn"></div>
+            <div class="menu_desktop">
+                <a href="#" class="menu_desktop_option">Limpar dados</a>
+                <a href="#" class="menu_desktop_option">Cadastro de transações</a>
+            </div>
+        </div>        
     </header>
     <main class="container">
         <form action="">
-            <div class="form_transition_type_wrapper"></div>
-            <label for="form_product-name">Nome da mercadoria</label>
-            <input type="text"  id="form_product-name" placeholder="Produto">
-            <label for="form_price">Valor</label>
-            <input type="number" name="" id="form_price" placeholder="R$ 0,00">
+            <div class="form_title">Nova transação</div>
+            <div class="form_inputs_wrapper">
+                <div class="form_input_wrapper">
+                    <label for="form_transaction-type">Tipo de transação</label>
+                    <select name="" id="form_transaction-type">
+                        <option value="">Compra</option>
+                        <option value="">Venda</option>
+                    </select>
+                </div>
+                <div class="form_input_wrapper form_product-name_wrapper ">
+                    <label for="form_product-name">Nome da mercadoria</label>
+                    <input type="text"  id="form_product-name" placeholder="Produto">
+                </div>
+                <div class="form_input_wrapper">
+                    <label for="form_price">Valor</label>
+                    <input type="number" name="" id="form_price" placeholder="R$ 0,00">
+                </div>
+            </div>            
             <button class="form_add-transaction-btn">Adicionar transação</button>
         </form>
         <section class="abstract">
@@ -42,7 +61,7 @@
             </div>
             <div class="abstract_row">
                 <div class="abstract_product">
-                    <div class="abstract_product_add-btn">+</div>
+                    <div class="abstract_product_add-btn">-</div>
                     <div class="abstract_product_name">Quis nostrud exercitation</div>
                 </div>
                 <div class="abstract_product_price">R$ 99,99</div>
