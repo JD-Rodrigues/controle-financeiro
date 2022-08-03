@@ -1,16 +1,16 @@
 @font-face {
     font-family: Lato;
-    src: url('/assets/fonts/Lato-Light.ttf');
+    src: url('../assets/fonts/Lato-Light.ttf');
 }
 
 @font-face {
     font-family: Lato Regular;
-    src: url('/assets/fonts/Lato-Regular.ttf');
+    src: url('../assets/fonts/Lato-Regular.ttf');
 }
 
 @font-face {
     font-family: Inter;
-    src: url('/assets/fonts/Inter-Regular.ttf');
+    src: url('../assets/fonts/Inter-Regular.ttf');
 }
 
 body {
