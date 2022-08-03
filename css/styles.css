@@ -40,6 +40,12 @@ main {
     color: #333333;
 }
 
+.logo_wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
 .logo img {
     width: 30px;

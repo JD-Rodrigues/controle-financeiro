@@ -46,9 +46,20 @@
         height: 80px;
     }
 
+    .logo_wrapper {
+        width: auto;
+        justify-content: flex-start;
+        align-items: center;
+        column-gap: 20px;
+    }
+
     main {
         min-height: calc(100vh - 80px);
     }    
+
+    .menu-burguer_btn {
+        display: none;
+    }
 
     .menu_desktop {
         display: flex;
@@ -74,10 +85,6 @@
         width: 652px;
         margin-top: 0;
         margin-bottom: 0;
-    }
-
-    .menu-burguer_btn {
-        display: none;
     }
 
     .form_add-transaction-btn {
