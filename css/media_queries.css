@@ -32,10 +32,6 @@
         align-self: flex-end;
         margin-bottom: 0;
     }
-
-    .abstract {
-        margin-bottom: 427px;
-    }
 }
 
 @media (min-width:1112px) {
@@ -50,13 +46,16 @@
         height: 80px;
     }
 
+    main {
+        min-height: calc(100vh - 80px);
+    }    
+
     .menu_desktop {
         display: flex;
     }
 
     form {
         width: 400px;
-        margin-bottom: 352px;
         padding-left: 15px;
         padding-right: 15px;
     }
@@ -89,10 +88,6 @@
 @media (min-width:1500px) {
     .container {
         width: 1140px;
-    }
-
-    form {
-        margin-bottom: 538px;
     }
 
     .abstract {
