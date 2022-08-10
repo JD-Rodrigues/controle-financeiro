@@ -1,33 +1,30 @@
 @media ( min-width: 768px ) {
-  .c-menu{
-    width: 252px;
+  .c-menu {
+    width: 250px;
   }
-  
+
   .c-form {
-    height: auto;
+    height: 190px;
     border: 1px solid #979797;
     border-radius: 4px;
     padding: 20px;
-    box-sizing: border-box;
   }
 
   .section-title--form {
     display: block;
-    text-align: center;
   }
 
-  .form_inputs_wrapper {
-    display: flex;
-    column-gap: 20px;
+  .form__inputs__wrapper {
+    flex-direction: row;
   }
 
-  .form_input_wrapper {
+  .form__input__wrapper {
     width: 150px;
     display: flex;
     flex-direction: column;
   }
 
-  .form_product-name_wrapper {
+  .form__input__wrapper--product-name {
     flex-grow: 2;
   }
 
@@ -53,7 +50,6 @@
   .c-logo__wrapper {
     width: auto;
     justify-content: flex-start;
-    align-items: center;
     column-gap: 20px;
   }
 
@@ -65,25 +61,19 @@
     display: none;
   }
 
-  .c-menu__wrapper {
-    position:relative;
-    height: 40px;
-  }
-
   .c-menu {
     position: relative;
     display: flex;
     width: auto;
-    height: 100%;
+    height: 40px;
     padding: 0;
     background-color: #fff;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    
   }
 
-  .c-menu li {  
+  .c-menu li {
     width: auto;
     color: #333;
     padding: 0 20px;
@@ -101,24 +91,22 @@
   .c-form {
     width: 400px;
     height: 344px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 20px 15px;
   }
 
-  .form_inputs_wrapper {
+  .form__inputs__wrapper {
     flex-direction: column;
   }
 
-  .form_input_wrapper {
+  .form__input__wrapper {
     width: 100%;
     display: flex;
     flex-direction: column;
   }
 
-  .c-abstract {
-    width: 652px;
-    margin-top: 0;
-    margin-bottom: 0;
+  .c-summary {
+    width: 650px;
+    margin: 0;
   }
 
   .c-form__add-transaction__btn {
@@ -131,7 +119,7 @@
     width: 1140px;
   }
 
-  .c-abstract {
+  .c-summary {
     width: 680px;
   }
 }
