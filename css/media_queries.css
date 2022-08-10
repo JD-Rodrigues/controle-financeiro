@@ -1,103 +1,108 @@
-@media (min-width: 768px){
-    form {
-        height: auto;
-        border: 1px solid #979797;
-        border-radius: 4px;
-        padding: 20px;
-        box-sizing: border-box;
-    }
+@media ( min-width: 768px ) {
+  .c-menu__mobile__wrapper {
+    width: 252px;
+  }
+  
+  .c-form {
+    height: auto;
+    border: 1px solid #979797;
+    border-radius: 4px;
+    padding: 20px;
+    box-sizing: border-box;
+  }
 
-    .form_title {
-        display: block;
-        text-align: center;
-    }
+  .section-title--form {
+    display: block;
+    text-align: center;
+  }
 
-    .form_inputs_wrapper {
-        display: flex;        
-        column-gap: 20px;
-    }
+  .form_inputs_wrapper {
+    display: flex;
+    column-gap: 20px;
+  }
 
-    .form_input_wrapper {
-        width: 150px;
-        display: flex;
-        flex-direction: column;
-    }
+  .form_input_wrapper {
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+  }
 
-    .form_product-name_wrapper {
-        flex-grow: 2;
-    }
+  .form_product-name_wrapper {
+    flex-grow: 2;
+  }
 
-    .form_add-transaction-btn {
-        width: 200px;
-        align-self: flex-end;
-        margin-bottom: 0;
-    }
+  .c-form__add-transaction__btn {
+    width: 200px;
+    align-self: flex-end;
+    margin-bottom: 0;
+  }
 }
 
-@media (min-width:1112px) {
-    .container {
-        width: 1112px;
-        margin: auto;
-        display: flex;
-        column-gap: 20px;
-    }
+@media ( min-width:1112px ) {
+  .o-container {
+    width: 1112px;
+    margin: auto;
+    display: flex;
+    column-gap: 20px;
+  }
 
-    .header {
-        height: 80px;
-    }
+  .c-layout__header {
+    height: 80px;
+  }
 
-    .logo_wrapper {
-        width: auto;
-        justify-content: flex-start;
-        align-items: center;
-        column-gap: 20px;
-    }
+  .c-logo__wrapper {
+    width: auto;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 20px;
+  }
 
-    main {
-        min-height: calc(100vh - 80px);
-    }    
+  .c-layout__main {
+    min-height: calc( 100vh - 80px );
+  }
 
-    .menu-burguer_btn {
-        display: none;
-    }
+  .c-menu-burguer__btn {
+    display: none;
+  }
 
-    .menu_desktop {
-        display: flex;
-    }
+  .c-menu__desktop {
+    display: flex;
+  }
 
-    form {
-        width: 400px;
-        padding-left: 15px;
-        padding-right: 15px;
-    }
+  .c-form {
+    width: 400px;
+    height: 344px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 
-    .form_inputs_wrapper {
-        flex-direction: column;        
-    }
+  .form_inputs_wrapper {
+    flex-direction: column;
+  }
 
-    .form_input_wrapper {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-    }
+  .form_input_wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
 
-    .abstract {
-        width: 652px;
-        margin-top: 0;
-        margin-bottom: 0;
-    }
+  .c-abstract {
+    width: 652px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 
-    .form_add-transaction-btn {
-        width: 100%;
-    }
+  .c-form__add-transaction__btn {
+    width: 100%;
+  }
 }
 
-@media (min-width:1500px) {
-    .container {
-        width: 1140px;
-    }
+@media ( min-width:1500px ) {
+  .o-container {
+    width: 1140px;
+  }
 
-    .abstract {
-        width: 680px;
-    }
+  .c-abstract {
+    width: 680px;
+  }
 }

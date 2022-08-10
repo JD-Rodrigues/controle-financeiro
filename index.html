@@ -6,82 +6,97 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Aplicativo de controle financeiro">
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/media_queries.css">
     <title>Controle financeiro - NewTab</title>
 </head>
 <body>
-    <header>
-        <div class="container header">
-            <div class="logo_wrapper">
-                <div class="logo">
+    <header class="c-layout__header">
+        <div class="o-container c-header-content__wrapper">
+            <div class="c-logo__wrapper">
+                <div class="c-logo">
                     <img src="./assets/icons/Ellipse-13.svg" alt="Logo do aplicativo de controle financeiro">
                 </div>
                 <div class="name">Controle financeiro</div>
-                <div class="menu-burguer_btn"></div>
-            </div>           
-            <div class="menu_desktop">
-                <a href="#" class="menu_desktop_option">Limpar dados</a>
-                <a href="#" class="menu_desktop_option">Cadastro de transações</a>
+                <div class="c-menu-burguer__btn js-menu-burguer__btn"></div>
             </div>
+            <nav class="c-menu__mobile__wrapper">
+                <ul class="c-menu__mobile js-menu__mobile">
+                    <div class="c-close__menu__mobile__btn"></div>
+                    <li><a href="#">Limpar dados</a></li>
+                    <li><a href="#">Cadastro de transações</a></li>
+                </ul>
+            </nav>   
+            <nav>
+                <ul class="c-menu__desktop">
+                    <li>
+                        <a href="#" class="o-menu__desktop__option">Limpar dados</a>
+                    </li>
+                    <li>
+                        <a href="#" class="o-menu__desktop__option">Cadastro de transações</a>
+                    </li>                
+                </ul>
+            </nav>     
         </div>        
     </header>
-    <main class="container">
-        <form>
-            <div class="form_title">Nova transação</div>
+    <main class="o-container c-layout__main">
+        <form class="c-form">
+            <div class="o-section-title section-title--form">Nova transação</div>
             <div class="form_inputs_wrapper">
                 <div class="form_input_wrapper">
                     <label for="form_transaction-type">Tipo de transação</label>
-                    <select id="form_transaction-type">
+                    <select class="c-form__input form__input--transaction-type" id="form_transaction-type">
                         <option value="">Compra</option>
                         <option value="">Venda</option>
                     </select>
                 </div>
                 <div class="form_input_wrapper form_product-name_wrapper ">
                     <label for="form_product-name">Nome da mercadoria</label>
-                    <input type="text"  id="form_product-name" placeholder="Produto">
+                    <input type="text" class="c-form__input"  id="form_product-name" placeholder="Produto">
                 </div>
                 <div class="form_input_wrapper">
                     <label for="form_price">Valor</label>
-                    <input type="number" id="form_price" placeholder="R$ 0,00">
+                    <input type="number" class="c-form__input" id="form_price" placeholder="R$ 0,00">
                 </div>
             </div>            
-            <button class="form_add-transaction-btn">Adicionar transação</button>
+            <button class="c-form__add-transaction__btn">Adicionar transação</button>
         </form>
-        <section class="abstract">
-            <div class="abstract_title">Extrato de transações</div>
-            <div class="abstract_row abstract_head">
+        <section class="c-abstract">
+            <div class="o-section-title">Extrato de transações</div>
+            <div class="c-abstract__row c-abstract__head c-abstract__header-footer--text">
                 <div>Mercadoria</div>
                 <div>Valor</div>
             </div>
-            <div class="abstract_row">
-                <div class="abstract_product">
+            <div class="c-abstract__row">
+                <div class="c-abstract__product">
                     <div class="abstract_product_add-btn">+</div>
                     <div class="abstract_product_name">Lorem ipsum dolor sit amet consectetur</div>
                 </div>
                 <div class="abstract_product_price">R$ 12.999,99</div>
             </div>
-            <div class="abstract_row">
-                <div class="abstract_product">
+            <div class="c-abstract__row">
+                <div class="c-abstract__product">
                     <div class="abstract_product_add-btn">-</div>
                     <div class="abstract_product_name">Quis nostrud exercitation</div>
                 </div>
                 <div class="abstract_product_price">R$ 99,99</div>
             </div>
-            <div class="abstract_row">
-                <div class="abstract_product">
+            <div class="c-abstract__row">
+                <div class="c-abstract__product">
                     <div class="abstract_product_add-btn">+</div>
                     <div class="abstract_product_name">Lorem ipsum</div>
                 </div>
                 <div class="abstract_product_price">R$ 9,99</div>
             </div>
-            <div class="abstract_row abstract_footer">
+            <div class="c-abstract__row c-abstract__footer c-abstract__header-footer--text">
                 <div>Total</div>
                 <div>R$ 12.909,99</div>
             </div>   
-            <div class="abstract_profit">LUCRO</div>         
+            <div class="c-abstract__profit">LUCRO</div>         
         </section>
     </main>
-    <footer></footer>    
+    <footer class="c-layout__footer"></footer>
+    <script src="scripts.js"></script>    
 </body>
 </html>

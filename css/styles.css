@@ -1,218 +1,263 @@
 @font-face {
-    font-family: Lato;
-    src: url('../assets/fonts/Lato-Light.ttf');
+  font-family: Lato;
+  src: url( "../assets/fonts/Lato-Light.ttf" );
 }
 
 @font-face {
-    font-family: Lato Regular;
-    src: url('../assets/fonts/Lato-Regular.ttf');
+  font-family: Lato Regular;
+  src: url( "../assets/fonts/Lato-Regular.ttf" );
 }
 
 @font-face {
-    font-family: Inter;
-    src: url('../assets/fonts/Inter-Regular.ttf');
+  font-family: Inter;
+  src: url( "../assets/fonts/Inter-Regular.ttf" );
 }
 
 body {
-    font-family: Lato;
+  font-family: Lato;
+  overflow: hidden;
 }
 
-.container{
-    padding: 20px;
-    box-sizing: border-box;
+.o-container {
+  padding: 20px;
+  box-sizing: border-box;
 }
 
-header {
-    background-color:#E0E0E0;  
+.c-layout__header {
+  height: 60px;
+  display: flex;
+  background-color: #e0e0e0;
 }
 
-main {
-    min-height: calc(100vh - 60px);
+.c-header-content__wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  font-size: 20px;
+  color: #333;
 }
 
-.header {
-    height: 60px;  
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-weight: 600;
-    font-size: 20px;
-    color: #333333;
+.c-logo__wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.logo_wrapper {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.c-logo img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  object-position: center;
 }
 
-.logo img {
-    width: 30px;
-    height: 30px;
-    object-fit: contain;
-    object-position: center;
+.c-menu-burguer__btn {
+  width: 24px;
+  height: 24px;
+  background-image: url( "../assets/icons/Shape.svg" );
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
-.menu-burguer_btn {
-    width: 24px;
-    height: 24px;
-    background-image: url('../assets/icons/Shape.svg');
+.c-menu__mobile__wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 85.5%;
+  height: 1000px;
+}
+
+.c-menu__mobile {
+  position: absolute;
+  right: 0;
+  width: 0;  
+  height: 100%;
+  padding: 20px;
+  background-color: #333;
+  text-align: right;
+  font-size: 16px;
+  line-height: 19px;
+  display: none;
+  flex-direction: column;
+  row-gap: 15px;
+  transition: 0.5s;
+}
+
+.c-menu__mobile a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.show__menu__mobile {
+  display: flex;
+  width: 100%;
+}
+
+.c-close__menu__mobile__btn {
+    width: 16px;
+    height: 16px;
+    background-image: url( "../assets/icons/Vector.svg" );
     background-position: center;
     background-size: contain;
-    background-repeat: no-repeat;
 }
 
-.menu_desktop {
-    height: 40px;
-    align-items: center;
-    font-size: 16px;
-    font-weight: 600;
-    color: #333333;
-    background-color: #FFFFFF;
-    display: none;
+.c-menu__desktop {
+  height: 40px;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  background-color: #fff;
+  display: none;
 }
 
-.menu_desktop_option {
-    padding: 0px 20px 0px 20px;
-    line-height: 19.2px;
-    border-right: 1px solid #979797;
-    text-decoration: none;
-    cursor: pointer;
+.o-menu__desktop__option {
+  padding: 0 20px;
+  line-height: 19.2px;
+  border-right: 1px solid #979797;
+  text-decoration: none;
+  cursor: pointer;
 }
 
-.menu_desktop_option:last-child {
-    border: none;
-}
-.menu_desktop_option:visited {
-    color: inherit;
+.o-menu__desktop__option:last-child {
+  border: none;
 }
 
-form {
-    width: 100%;
-    height: 290px;
-    display: flex;
-    flex-direction: column;
-    border-bottom: solid 1px #979797;
-    font-family: Lato Regular;
+.o-menu__desktop__option:visited {
+  color: inherit;
 }
 
-form label {
-    margin-top: 20px;
-    margin-bottom: 2px;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 22px;
-    color: #333333;
+.c-layout__main {
+  min-height: calc( 100vh - 60px );
 }
 
-#form_transaction-type, #form_product-name, #form_price {
-    width: 100%;
-    height: 32px;
-    border: 1px solid #979797;
-    border-radius: 4px;
-    color: #979797;
-    background-color: #FFFFFF;
-    box-sizing: border-box; 
-    padding-left: 12px;   
-    padding-right: 12px;
+.c-form {
+  width: 100%;
+  height: 290px;
+  display: flex;
+  flex-direction: column;
+  border-bottom: solid 1px #979797;
+  font-family: Lato Regular;
 }
 
-#form_transaction-type {
-    padding-left: 7px;
-}
-#form_product-name::placeholder, #form_price::placeholder {
-    color: #979797;
-}
-
-.form_add-transaction-btn {
-    width: 100%;
-    height: 32px;
-    margin-top: 20px;
-    margin-bottom: 28.5px;
-    border: none;
-    border-radius: 4px;
-    box-sizing: border-box;
-    color: #FFFFFF;
-    background-color: #333333;
-    font-family: Inter;
-    font-size: 14px;      
-    cursor: pointer;  
+.c-form label {
+  margin-top: 20px;
+  margin-bottom: 2px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: #333;
 }
 
-.abstract {
-    width: 100%;
-    height: auto;
-    margin-top: 20px;
-    margin-bottom: 22px;
-    padding-top: 21px;    
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: black;
-    font-family: Lato Regular;
+.c-form__input {
+  width: 100%;
+  height: 32px;
+  border: 1px solid #979797;
+  border-radius: 4px;
+  color: #979797;
+  background-color: #fff;
+  box-sizing: border-box;
+  padding-left: 12px;
+  padding-right: 12px;
 }
 
-.abstract_title, .form_title{
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 22px;
+.form__input--transaction-type {
+  padding-left: 7px;
 }
 
-.form_title {
-    display: none;
+.c-form__input::placeholder {
+  color: #979797;
 }
 
-.abstract_row {
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 1px solid #979797;    
-    font-size: 14px;
-    line-height: 16px;
-    padding: 10px;
-    padding-top: 7px;
-    padding-bottom: 8px;
-    box-sizing: border-box;
+.c-form__add-transaction__btn {
+  width: 100%;
+  height: 32px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #fff;
+  background-color: #333;
+  font-family: Inter;
+  font-size: 14px;
+  cursor: pointer;
 }
 
-.abstract_product {
-    width: 231px;
-    display: flex;
-    column-gap: 10px;
+.c-abstract {
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+  margin-bottom: 22px;
+  padding-top: 21px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #000;
+  font-family: Lato Regular;
 }
 
-.abstract_head, .abstract_footer{
-    font-weight: 700;
+.o-section-title {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 22px;
 }
 
-.abstract_head {
-    padding-left: 28px;
-    padding-right: 35px;
-    padding-top: 19px;
-    box-sizing: border-box;
+.section-title--form {
+  display: none;
 }
 
-.abstract_footer {
-    border: none;
-    border-top: 1px solid #979797; 
-    margin-top: 2px;
-    padding-top: 9px;
+.c-abstract__row {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #979797;
+  font-size: 14px;
+  line-height: 16px;
+  padding: 10px;
+  padding-top: 7px;
+  padding-bottom: 8px;
+  box-sizing: border-box;
 }
 
-.abstract_profit {
-    font-size: 10px;
-    align-self: flex-end;
-    padding-right: 10px;
-    margin-top: -5px;
-
+.c-abstract__product {
+  width: 231px;
+  display: flex;
+  column-gap: 10px;
 }
 
-footer {
-    height: 8px;
-    background-color: #333333;
-    box-sizing: border-box;
+.c-abstract__head {
+  padding-left: 28px;
+  padding-right: 35px;
+  padding-top: 19px;
+  box-sizing: border-box;
+}
+
+.c-abstract__footer {
+  border: none;
+  border-top: 1px solid #979797;
+  margin-top: 2px;
+  padding-top: 9px;
+}
+
+.c-abstract__header-footer--text {
+  font-weight: 700;
+}
+
+.c-abstract__profit {
+  font-size: 10px;
+  align-self: flex-end;
+  padding-right: 10px;
+  margin-top: -5px;
+}
+
+.c-layout__footer {
+  height: 8px;
+  background-color: #333;
+  box-sizing: border-box;
 }
 
