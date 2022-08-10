@@ -1,5 +1,5 @@
 @media ( min-width: 768px ) {
-  .c-menu__mobile__wrapper {
+  .c-menu{
     width: 252px;
   }
   
@@ -65,8 +65,37 @@
     display: none;
   }
 
-  .c-menu__desktop {
+  .c-menu__wrapper {
+    position:relative;
+    height: 40px;
+  }
+
+  .c-menu {
+    position: relative;
     display: flex;
+    width: auto;
+    height: 100%;
+    padding: 0;
+    background-color: #fff;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+  }
+
+  .c-menu li {  
+    width: auto;
+    color: #333;
+    padding: 0 20px;
+    border-right: 1px solid #979797;
+  }
+
+  .c-menu li:last-child {
+    border: none;
+  }
+
+  .c-close__menu__mobile__btn {
+    display: none;
   }
 
   .c-form {
