@@ -1,24 +1,8 @@
-@font-face {
-  font-family: Lato;
-  src: url( "../assets/fonts/Lato-Light.ttf" );
-}
-
-@font-face {
-  font-family: Lato Regular;
-  src: url( "../assets/fonts/Lato-Regular.ttf" );
-}
-
-@font-face {
-  font-family: Inter;
-  src: url( "../assets/fonts/Inter-Regular.ttf" );
-}
+/*----------------------------------------------------*\
+  # - M A I N  W R A P P E R S -
+\*----------------------------------------------------*/
 
 body {
-  --main: #979797;
-  --secondary: #e0e0e0;
-  --contrast: #333;
-  --white: #fff;
-  --black: #000;
   position: relative;
   font-family: Lato Regular;
   color: var( --contrast );
@@ -29,13 +13,24 @@ body {
   box-sizing: border-box;
 }
 
+.c-layout__main {
+  min-height: calc( 100vh - 60px );
+  font-size: 14px;
+}
+
+
+
+
+
+/*----------------------------------------------------*\
+  # - H E A D E R -
+\*----------------------------------------------------*/
+
 .c-layout__header {
   height: 60px;
   display: flex;
   background-color: var( --secondary );
-  font-family: Lato;
-  font-size: 20px;
-  font-weight: 600;
+  font: 600 20px Lato;
 }
 
 .c-header__content__wrapper {
@@ -44,6 +39,9 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+
+
+/* - Logo - */
 
 .c-logo__wrapper {
   width: 100%;
@@ -56,6 +54,9 @@ body {
   width: 30px;
   height: 30px;
 }
+
+
+/* - Menu - */
 
 .c-menu-burguer__btn img {
   width: 24px;
@@ -73,7 +74,7 @@ body {
   text-align: right;
   font-size: 16px;
   line-height: 19px;
-  display: none;
+  display: flex;
   flex-direction: column;
   row-gap: 15px;
   transition: 0.5s;
@@ -94,18 +95,36 @@ body {
   height: 16px;
 }
 
-.c-layout__main {
-  min-height: calc( 100vh - 60px );
-  font-size: 14px;
-}
+
+
+
+
+/*----------------------------------------------------*\
+  # - F O R M -
+\*----------------------------------------------------*/
 
 .c-form {
   width: 100%;
   height: 290px;
   display: flex;
   flex-direction: column;
+  row-gap: 20px;
   border-bottom: solid 1px var( --main );
 }
+
+.o-section-title {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 22px;  
+}
+
+.section-title--form {
+  display: none;
+  text-align: center;
+}
+
+
+/* - Inputs - */
 
 .form__inputs__wrapper {
   display: flex;
@@ -114,8 +133,13 @@ body {
   column-gap: 20px;
 }
 
+.form__input__wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2px;
+}
+
 .c-form label {
-  margin-bottom: 2px;
   font-weight: 400;
   line-height: 22px;
 }
@@ -138,18 +162,27 @@ body {
   padding-left: 7px;
 }
 
+
+/* - Submit button - */
+
 .c-form__add-transaction__btn {
   width: 100%;
   height: 32px;
-  margin-top: 20px;
   border: none;
   border-radius: 4px;
-  box-sizing: border-box;
   color: var( --white );
   background-color: var( --contrast );
   font-family: Inter;
   cursor: pointer;
 }
+
+
+
+
+
+/*----------------------------------------------------*\
+  # - S U M M A R Y -
+\*----------------------------------------------------*/
 
 .c-summary {
   width: 100%;
@@ -162,17 +195,6 @@ body {
   color: var( --black );
 }
 
-.o-section-title {
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 22px;
-}
-
-.section-title--form {
-  display: none;
-  text-align: center;
-}
-
 .c-summary__row {
   width: 100%;
   height: auto;
@@ -180,7 +202,11 @@ body {
   justify-content: space-between;
   border-bottom: 1px solid var( --main );
   line-height: 16px;
-  padding: 7px 10px;
+  padding: 10px;
+}
+
+.c-summary__row--header {
+  padding: 20px 40px 7px 30px;
 }
 
 .c-summary__row--header-footer__text {
@@ -193,29 +219,29 @@ body {
   column-gap: 10px;
 }
 
-.c-summary__head {
-  padding-left: 30px;
-  padding-right: 40px;
-  padding-top: 20px;
-}
-
 .c-summary__footer {
   border: none;
   border-top: 1px solid var( --main );
   margin-top: 2px;
-  padding-top: 9px;
+  padding-bottom: 0;
   padding-left: 30px;
 }
 
 .c-summary__profit {
   font-size: 10px;
   align-self: flex-end;
-  padding-right: 10px;
-  margin-top: -5px;
+  padding-right: 10px;  
 }
+
+
+
+
+
+/*----------------------------------------------------*\
+  # - F O O T E R -
+\*----------------------------------------------------*/
 
 .c-layout__footer {
   height: 8px;
   background-color: var( --contrast );
 }
-
