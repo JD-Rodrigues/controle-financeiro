@@ -8,18 +8,12 @@ body {
   color: var( --contrast );
 }
 
-.o-container {
-  padding: 20px;
-  box-sizing: border-box;
-}
+.o-container { padding: 20px; }
 
 .c-layout__main {
   min-height: calc( 100vh - 60px );
   font-size: 14px;
 }
-
-
-
 
 
 /*----------------------------------------------------*\
@@ -40,7 +34,6 @@ body {
   align-items: center;
 }
 
-
 /* - Logo - */
 
 .c-logo__wrapper {
@@ -54,7 +47,6 @@ body {
   width: 30px;
   height: 30px;
 }
-
 
 /* - Menu - */
 
@@ -70,33 +62,26 @@ body {
   width: 350px;
   height: 100%;
   padding: 20px;
-  background-color: var( --contrast );
-  text-align: right;
-  font-size: 16px;
-  line-height: 19px;
   display: flex;
   flex-direction: column;
   row-gap: 15px;
-  transition: 0.5s;
+  text-align: right;
+  background-color: var( --contrast );
+  font-size: 16px;
+  line-height: 19px;
   color: var( --white );
+  transition: 0.5s;
 }
 
-.c-menu a {
-  text-decoration: none;
-}
+.c-menu a { text-decoration: none; }
 
-.c-menu a:visited {
-  color: inherit;
-}
+.c-menu a:visited { color: inherit; }
 
 .c-close__menu__mobile__btn {
-  align-self: flex-start;
   width: 16px;
   height: 16px;
+  align-self: flex-start;
 }
-
-
-
 
 
 /*----------------------------------------------------*\
@@ -106,23 +91,22 @@ body {
 .c-form {
   width: 100%;
   height: 290px;
+  border-bottom: solid 1px var( --main );
   display: flex;
   flex-direction: column;
   row-gap: 20px;
-  border-bottom: solid 1px var( --main );
 }
 
 .o-section-title {
   font-size: 18px;
   font-weight: 700;
-  line-height: 22px;  
+  line-height: 22px;
 }
 
 .section-title--form {
   display: none;
   text-align: center;
 }
-
 
 /* - Inputs - */
 
@@ -147,21 +131,16 @@ body {
 .c-form__input {
   width: 100%;
   height: 32px;
+  padding: 0 12px;
   border: 1px solid var( --main );
   border-radius: 4px;
-  color: var( --main );
   background-color: var( --white );
-  padding: 0 12px;
-}
-
-.c-form__input::placeholder {
   color: var( --main );
 }
 
-.form__input--transaction-type {
-  padding-left: 7px;
-}
+.c-form__input::placeholder { color: var( --main ); }
 
+.form__input--transaction-type { padding-left: 7px; }
 
 /* - Submit button - */
 
@@ -170,14 +149,11 @@ body {
   height: 32px;
   border: none;
   border-radius: 4px;
-  color: var( --white );
   background-color: var( --contrast );
   font-family: Inter;
+  color: var( --white );
   cursor: pointer;
 }
-
-
-
 
 
 /*----------------------------------------------------*\
@@ -198,20 +174,16 @@ body {
 .c-summary__row {
   width: 100%;
   height: auto;
+  padding: 10px;
+  border-bottom: 1px solid var( --main );
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid var( --main );
   line-height: 16px;
-  padding: 10px;
 }
 
-.c-summary__row--header {
-  padding: 20px 40px 7px 30px;
-}
+.c-summary__row--header { padding: 20px 40px 7px 30px; }
 
-.c-summary__row--header-footer__text {
-  font-weight: 700;
-}
+.c-summary__row--header-footer__text { font-weight: 700; }
 
 .c-summary__product {
   width: 250px;
@@ -220,21 +192,18 @@ body {
 }
 
 .c-summary__footer {
-  border: none;
-  border-top: 1px solid var( --main );
   margin-top: 2px;
   padding-bottom: 0;
   padding-left: 30px;
+  border: none;
+  border-top: 1px solid var( --main );
 }
 
 .c-summary__profit {
-  font-size: 10px;
+  padding-right: 10px;
   align-self: flex-end;
-  padding-right: 10px;  
+  font-size: 10px;
 }
-
-
-
 
 
 /*----------------------------------------------------*\
