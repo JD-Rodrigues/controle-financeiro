@@ -62,7 +62,7 @@ body {
   width: 350px;
   height: 100%;
   padding: 20px;
-  display: flex;
+  display: none;
   flex-direction: column;
   row-gap: 15px;
   text-align: right;
