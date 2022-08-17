@@ -64,7 +64,6 @@ body {
   padding: 20px;
   display: none;
   flex-direction: column;
-  row-gap: 15px;
   text-align: right;
   background-color: var( --contrast );
   font-size: 16px;
@@ -73,14 +72,21 @@ body {
   transition: 0.5s;
 }
 
+.c-menu li { padding: 10px; }
+
+.c-menu li:hover { background-color: var( --white ); }
+
 .c-menu a { text-decoration: none; }
 
-.c-menu a:visited { color: inherit; }
+.c-menu a:visited { color: var(--white); }
+
+.c-menu a:hover { color:var(--contrast) }
 
 .c-close__menu__mobile__btn {
   width: 16px;
   height: 16px;
   align-self: flex-start;
+  margin-bottom: 15px;
 }
 
 
@@ -181,7 +187,7 @@ body {
   line-height: 16px;
 }
 
-.c-summary__row--header { padding: 20px 40px 7px 30px; }
+.c-summary__row--header { padding: 20px 10px 7px 30px; }
 
 .c-summary__row--header-footer__text { font-weight: 700; }
 

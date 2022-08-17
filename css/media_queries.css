@@ -46,17 +46,26 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background-color: #fff;
+    background-color: var(--white);
   }
 
   .c-menu li {
     width: auto;
     padding: 0 20px;
-    border-right: 1px solid #979797;
-    color: #333;
+    border-right: 1px solid var(--main);
+    color: var(--contrast);
   }
 
   .c-menu li:last-child { border: none; }
+
+  .c-menu a {
+    color: var(--contrast);
+  }
+
+  .c-menu a:visited {
+    color: var(--contrast);
+  }
+
 
   .c-close__menu__mobile__btn { display: none; }
 }
@@ -70,7 +79,7 @@
   .c-form {
     height: 190px;
     padding: 20px;
-    border: 1px solid #979797;
+    border: 1px solid var(--main);
     border-radius: 4px;
   }
 
