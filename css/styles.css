@@ -141,7 +141,7 @@ body {
   border: 1px solid var( --main );
   border-radius: 4px;
   background-color: var( --white );
-  color: var( --main );
+  color: var( --contrast );
 }
 
 .c-form__input::placeholder { color: var( --main ); }

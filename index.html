@@ -35,19 +35,19 @@
             <div class="o-section-title  section-title--form">Nova transação</div>
             <div class="form__inputs__wrapper">
                 <div class="form__input__wrapper">
-                    <label for="form_transaction-type">Tipo de transação</label>
-                    <select class="c-form__input   form__input--transaction-type" id="form_transaction-type">
+                    <label for="form__transaction-type">Tipo de transação</label>
+                    <select class="c-form__input   form__input--transaction-type" id="form__transaction-type">
                         <option value="">Compra</option>
                         <option value="">Venda</option>
                     </select>
                 </div>
                 <div class="form__input__wrapper  form__input__wrapper--product-name">
-                    <label for="form_product-name">Nome da mercadoria</label>
-                    <input type="text" class="c-form__input"  id="form_product-name" placeholder="Produto">
+                    <label for="form__product-name">Nome da mercadoria</label>
+                    <input type="text" class="c-form__input"  id="form__product-name" placeholder="Produto" required>
                 </div>
                 <div class="form__input__wrapper">
-                    <label for="form_price">Valor</label>
-                    <input type="number" class="c-form__input" id="form_price" placeholder="R$ 0,00">
+                    <label for="form__price">Valor</label>
+                    <input type="text" class="c-form__input" id="form__price" placeholder="R$ 0,00" required>
                 </div>
             </div>            
             <button class="c-form__add-transaction__btn">Adicionar transação</button>
@@ -87,5 +87,6 @@
         </section>
     </main>
     <footer class="c-layout__footer"></footer>
+    <script src="scripts.js"></script>
 </body>
 </html>
