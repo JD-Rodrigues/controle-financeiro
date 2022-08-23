@@ -59,7 +59,7 @@ body {
   position: absolute;
   top: 0;
   right: 0;
-  width: 350px;
+  width: 0;
   height: 100%;
   padding: 20px;
   display: none;
@@ -187,7 +187,7 @@ body {
   line-height: 16px;
 }
 
-.c-summary__row--header { padding: 20px 10px 7px 30px; }
+.c-summary__row--header { padding: 20px 10px 7px 20px; }
 
 .c-summary__row--header-footer__text { font-weight: 700; }
 
@@ -197,10 +197,14 @@ body {
   column-gap: 10px;
 }
 
+.c-in__out__sign {
+  width: 5px;
+}
+
 .c-summary__footer {
   margin-top: 2px;
   padding-bottom: 0;
-  padding-left: 30px;
+  padding-left: 20px;
   border: none;
   border-top: 1px solid var( --main );
 }
@@ -209,6 +213,20 @@ body {
   padding-right: 10px;
   align-self: flex-end;
   font-size: 10px;
+}
+
+.c-transactions {
+  width: 100%;
+  display: inherit;
+  flex-direction: inherit;
+}
+
+.c-no__transactions {
+  padding: 50px;
+  font-size: 16px;
+  font-weight:600;
+  color: var(--main);
+  text-align: center;
 }
 
 
