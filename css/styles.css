@@ -150,7 +150,7 @@ body {
 
 /* - Submit button - */
 
-.c-form__add-transaction__btn {
+.c-form__submit__btn {
   width: 100%;
   height: 32px;
   border: none;

@@ -95,7 +95,7 @@
 
   .form__input__wrapper--product-name { flex-grow: 2; }
 
-  .c-form__add-transaction__btn {
+  .c-form__submit__btn {
     width: 200px;
     margin-bottom: 0;
     align-self: flex-end;
@@ -117,7 +117,7 @@
     flex-direction: column;
   }
 
-  .c-form__add-transaction__btn { width: 100%; }
+  .c-form__submit__btn { width: 100%; }
 }
 
 

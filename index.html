@@ -24,7 +24,7 @@
             <nav>
                 <ul class="c-menu  js-menu__mobile">
                     <div class="c-close__menu__mobile__btn"><img src="./assets/icons/Vector.svg" alt=""></div>
-                    <li><a href="#">Limpar dados</a></li>
+                    <li><a id="clean__data" href="#">Limpar dados</a></li>
                     <li><a href="#">Cadastro de transações</a></li>
                 </ul>
             </nav>   
@@ -37,20 +37,20 @@
                 <div class="form__input__wrapper">
                     <label for="form__transaction-type">Tipo de transação</label>
                     <select class="c-form__input   form__input--transaction-type" id="form__transaction-type">
-                        <option value="">Compra</option>
-                        <option value="">Venda</option>
+                        <option>Compra</option>
+                        <option>Venda</option>
                     </select>
                 </div>
                 <div class="form__input__wrapper  form__input__wrapper--product-name">
                     <label for="form__product-name">Nome da mercadoria</label>
-                    <input type="text" class="c-form__input"  id="form__product-name" placeholder="Produto" required>
+                    <input type="text" class="c-form__input"  id="form__product-name" placeholder="Produto" >
                 </div>
                 <div class="form__input__wrapper">
                     <label for="form__price">Valor</label>
-                    <input type="text" class="c-form__input" id="form__price" placeholder="R$ 0,00" required>
+                    <input type="text" class="c-form__input" id="form__price" placeholder="R$ 0,00" >
                 </div>
             </div>            
-            <button class="c-form__add-transaction__btn">Adicionar transação</button>
+            <button class="c-form__submit__btn">Adicionar transação</button>
         </form>
         <section class="c-summary">
             <div class="o-section-title">Extrato de transações</div>
