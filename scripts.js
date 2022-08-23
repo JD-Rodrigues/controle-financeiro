@@ -14,6 +14,7 @@ form.addEventListener('submit', (e)=>{
     e.preventDefault()
     emptyFieldsValidation() === true && submitTransaction()
     fillTransactionsArea()
+    form.reset()
 })
 
 cleanData.addEventListener('click', ()=>{
