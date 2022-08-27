@@ -77,11 +77,11 @@ body {
 
 .c-menu li:hover { background-color: var( --white ); }
 
+.c-menu li:hover a { color: var(--contrast); }
+
 .c-menu a { text-decoration: none; }
 
 .c-menu a:visited { color: var(--white); }
-
-.c-menu a:hover { color:var(--contrast) }
 
 .c-close__menu__mobile__btn {
   width: 16px;
