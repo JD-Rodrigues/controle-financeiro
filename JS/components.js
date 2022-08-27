@@ -1,12 +1,17 @@
 import { calculate, indicateProfitOrLoss, loadData, maskNumberToPtBr, validatePrice } from "./functions.js";
+import {transactionsSummary} from "./global_and_listeners.js";
 
-const transactionsSummary = document.querySelector(".c-transactions");
+
+// Renderiza a estrutura da tabela
 
 function table() {
     transactionsSummary.innerHTML = "<div class = 'c-summary__row  c-summary__row--header  c-summary__row--header-footer__text'> <div>Mercadoria</div> <div>Valor</div> </div>";
     item();
     tableFooterTotal();
 }
+
+
+//Renderiza um item transacionado
 
 function item() {
     const data = loadData();
@@ -19,6 +24,9 @@ function item() {
     });
 }
 
+
+//Renderiza a última linha da tabela, contendo o saldo das transações.
+
 function tableFooterTotal() {
     transactionsSummary.innerHTML += `<div class = "c-summary__row  c-summary__footer  c-summary__row--header-footer__text">
     <div>Total</div>
@@ -26,6 +34,9 @@ function tableFooterTotal() {
 </div>
 <div class = "c-summary__profit">${indicateProfitOrLoss(calculate())}</div>`;
 }
+
+
+//Renderiza a informação de que não há transações
 
 function noTransactions() {
     transactionsSummary.innerHTML = "<div class = 'c-no__transactions'>Nenhuma transação cadastrada</div>";

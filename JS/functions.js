@@ -1,16 +1,23 @@
 import { noTransactions, table } from "./components.js";
+import {inputPrice, inputProduct, select} from "./global_and_listeners.js"
+
+
+// ======================================================= //
+//                      VALIDAÇÕES                         // 
+// ======================================================= //
+
+// Captura o número inserido no campo de preço e o devolve ao mesmo campo, fomrmatado em pt-BR.
 
 function fillInputPrice() {
-    const inputPrice = document.querySelector("#form__price");
     const price = validatePrice(inputPrice.value);
     const maskedPrice = maskNumberToPtBr(price);
     inputPrice.value = maskedPrice;
 }
 
-function validateRequiredFields() {
-    const inputPrice = document.querySelector("#form__price");
-    const inputProduct = document.querySelector("#form__product-name");
 
+//Retorna true se todos os campos do formulário estão preenchidos. Do contrário, retorna false.
+
+function validateRequiredFields() {
     if(inputPrice.value.length === 0 || inputProduct.value.length === 0) {
         alert("Preencha todos os campos!");
         return false;
@@ -19,10 +26,16 @@ function validateRequiredFields() {
     }
 }
 
+
+// Recebe uma string e a retorna filtrada por caracteres de "1" a "9".
+
 function validatePrice(price) {
     const validPrice = price.replace(/[^"1""2""3""4""5""6""7""8""9""0"]/g, "");
     return validPrice;
 }
+
+
+//Recebe uma string de algarismos e a retorna formatada em pt-BR: os milhares separados com "." e os decimais com ",".
 
 function maskNumberToPtBr(value) {
     if(value.length>2) {
@@ -43,10 +56,20 @@ function maskNumberToPtBr(value) {
     }
 }
 
+
+// ======================================================= //
+//            SALVAMENTO E RECUPERAÇÃO DE DADOS            // 
+// ======================================================= //
+
+//Recebe um array de objetos contendo as transações e o salva no localStorage.
+
 function saveData(data) {
     const dataString = JSON.stringify(data);
     localStorage.setItem("transactions", dataString);
 }
+
+
+//Retorna o array de objetos contendo as transações, recuperado do localStorage. Caso o localStorage esteja vazio, retorna um array vazio.
 
 function loadData() {
     if (localStorage.getItem("transactions") !== null) {
@@ -57,11 +80,10 @@ function loadData() {
     }
 }
 
-function submitTransaction() {
-    const inputPrice = document.querySelector("#form__price");
-    const inputProduct = document.querySelector("#form__product-name");
-    const select = document.querySelector("select");
 
+// Adiciona uma nova transação à base de dados, a partir das informações inseridas no formulário. 
+
+function submitTransaction() {
     const data = loadData();
     const transaction = {
         type: select.value,
@@ -72,6 +94,13 @@ function submitTransaction() {
     saveData(data);
     calculate();
 }
+
+
+// ======================================================= //
+//                      CÁLCULO                            // 
+// ======================================================= //
+
+// Retorna o saldo de todas as transações.
 
 function calculate() {
     let total = 0;
@@ -86,6 +115,9 @@ function calculate() {
     return total;
 }
 
+
+// Recebe o saldo das transações e retorna a informação de lucro ou prejuízo.
+
 function indicateProfitOrLoss(value) {
     if(value > 0) {
         return "[LUCRO]";
@@ -96,9 +128,20 @@ function indicateProfitOrLoss(value) {
     }
 }
 
+
+// ======================================================= //
+//                PREENCHIMENTO DO RELATÓRIO               // 
+// ======================================================= //
+
+// Retorna a tabela de transações. Caso não haja transações, retorna o componente "não há transações".
+
 function fillTransactionsArea() {
     const database = loadData();
     database.length > 0 ? table() : noTransactions();
 }
+
+
+
+
 
 export {fillInputPrice, fillTransactionsArea, validatePrice, validateRequiredFields, maskNumberToPtBr, saveData, loadData, submitTransaction, calculate, indicateProfitOrLoss}

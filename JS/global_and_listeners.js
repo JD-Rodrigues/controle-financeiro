@@ -6,9 +6,11 @@ const form = document.querySelector(".c-form");
 const select = document.querySelector("select");
 const cleanData = document.querySelector("#clean__data");
 const transactionsSummary = document.querySelector(".c-transactions");
-const menuBurguerBtn = document.querySelector(".c-menu-burguer__btn");
+const showMenuMobile = document.querySelector(".c-menu-burguer__btn");
 const menu = document.querySelector(".c-menu");
 const closeMenu = document.querySelector(".c-close__menu__mobile__btn");
+
+window.addEventListener("load",fillTransactionsArea);
 
 inputPrice.addEventListener("input", fillInputPrice);
 
@@ -24,20 +26,18 @@ cleanData.addEventListener("click", () => {
     fillTransactionsArea();
 });
 
-menuBurguerBtn.addEventListener("click", () => {
-    menu.classList.toggle('js-show__hide__menu');
+showMenuMobile.addEventListener("click", () => {
+    menu.classList.toggle("js-show__hide__menu");
     setTimeout(() => {
-        menu.classList.toggle('js-show__hide__menu--smooth');
+        menu.classList.toggle("js-show__hide__menu--smooth");
     },0.5);
 });
 
 closeMenu.addEventListener("click", () => {
-    menu.classList.toggle('js-show__hide__menu--smooth');
+    menu.classList.toggle("js-show__hide__menu--smooth");
     setTimeout(() => {
-        menu.classList.toggle('js-show__hide__menu');
+        menu.classList.toggle("js-show__hide__menu");
     },200);
 });
 
-window.addEventListener("load",fillTransactionsArea);
-
-export {inputPrice, inputProduct, form, select, cleanData, transactionsSummary, menu, menuBurguerBtn, closeMenu}
+export {inputPrice, inputProduct, form, select, cleanData, transactionsSummary, menu, showMenuMobile, closeMenu}
