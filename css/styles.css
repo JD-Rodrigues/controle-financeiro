@@ -59,10 +59,11 @@ body {
   position: absolute;
   top: 0;
   right: 0;
-  width: 0;
+  width: 350px;
   height: 100%;
   padding: 20px;
   display: none;
+  opacity: 0;
   flex-direction: column;
   text-align: right;
   background-color: var( --contrast );
@@ -87,6 +88,14 @@ body {
   height: 16px;
   align-self: flex-start;
   margin-bottom: 15px;
+}
+
+.js-show__hide__menu {
+  display: flex;
+}
+
+.js-show__hide__menu--smooth {
+  opacity: 1;
 }
 
 
