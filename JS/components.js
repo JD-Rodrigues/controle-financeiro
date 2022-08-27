@@ -2,7 +2,7 @@ import { calculate, indicateProfitOrLoss, loadData, maskNumberToPtBr, validatePr
 import {transactionsSummary} from "./global_and_listeners.js";
 
 
-// Renderiza a estrutura da tabela
+// It renders the table structure, containing the first row, the header.
 
 function table() {
     transactionsSummary.innerHTML = "<div class = 'c-summary__row  c-summary__row--header  c-summary__row--header-footer__text'> <div>Mercadoria</div> <div>Valor</div> </div>";
@@ -11,7 +11,7 @@ function table() {
 }
 
 
-//Renderiza um item transacionado
+// Renders a transitioned item row.
 
 function item() {
     const data = loadData();
@@ -25,7 +25,7 @@ function item() {
 }
 
 
-//Renderiza a última linha da tabela, contendo o saldo das transações.
+// Renders the balance, the last row of the table.
 
 function tableFooterTotal() {
     transactionsSummary.innerHTML += `<div class = "c-summary__row  c-summary__footer  c-summary__row--header-footer__text">
@@ -36,8 +36,7 @@ function tableFooterTotal() {
 }
 
 
-//Renderiza a informação de que não há transações
-
+// Renders the information "There is no transactions".
 function noTransactions() {
     transactionsSummary.innerHTML = "<div class = 'c-no__transactions'>Nenhuma transação cadastrada</div>";
 }

@@ -3,10 +3,10 @@ import {inputPrice, inputProduct, select} from "./global_and_listeners.js"
 
 
 // ======================================================= //
-//                      VALIDAÇÕES                         // 
+//                      VALIDATIONS                        // 
 // ======================================================= //
 
-// Captura o número inserido no campo de preço e o devolve ao mesmo campo, fomrmatado em pt-BR.
+// Gets a number from the price input and reinserts it in the same field, formatted in pt-BR.
 
 function fillInputPrice() {
     const price = validatePrice(inputPrice.value);
@@ -15,7 +15,7 @@ function fillInputPrice() {
 }
 
 
-//Retorna true se todos os campos do formulário estão preenchidos. Do contrário, retorna false.
+// Returns true if all fields are filled. Otherwise, it returns false.
 
 function validateRequiredFields() {
     if(inputPrice.value.length === 0 || inputProduct.value.length === 0) {
@@ -27,7 +27,7 @@ function validateRequiredFields() {
 }
 
 
-// Recebe uma string e a retorna filtrada por caracteres de "1" a "9".
+// Gets a string and returns it filtered by characters from "0" to "9"
 
 function validatePrice(price) {
     const validPrice = price.replace(/[^"1""2""3""4""5""6""7""8""9""0"]/g, "");
@@ -35,7 +35,7 @@ function validatePrice(price) {
 }
 
 
-//Recebe uma string de algarismos e a retorna formatada em pt-BR: os milhares separados com "." e os decimais com ",".
+// Gets a string of digits and returns it formatted in pt-BR: the thousands separated with "." and decimals with ",".
 
 function maskNumberToPtBr(value) {
     if(value.length>2) {
@@ -58,10 +58,10 @@ function maskNumberToPtBr(value) {
 
 
 // ======================================================= //
-//            SALVAMENTO E RECUPERAÇÃO DE DADOS            // 
+//                 DATA SAVE AND RECOVERY                  // 
 // ======================================================= //
 
-//Recebe um array de objetos contendo as transações e o salva no localStorage.
+// Gets an array of objects, containing the transactions, and save it in localStorage.
 
 function saveData(data) {
     const dataString = JSON.stringify(data);
@@ -69,7 +69,7 @@ function saveData(data) {
 }
 
 
-//Retorna o array de objetos contendo as transações, recuperado do localStorage. Caso o localStorage esteja vazio, retorna um array vazio.
+// Returns an array of objects, containing the transactions, recovered from localStorage. If localStorage is empty, it returns an empty array.
 
 function loadData() {
     if (localStorage.getItem("transactions") !== null) {
@@ -81,7 +81,7 @@ function loadData() {
 }
 
 
-// Adiciona uma nova transação à base de dados, a partir das informações inseridas no formulário. 
+// Adds new transaction to the database, from the information entered in the form.
 
 function submitTransaction() {
     const data = loadData();
@@ -97,10 +97,10 @@ function submitTransaction() {
 
 
 // ======================================================= //
-//                      CÁLCULO                            // 
+//                      CALCULATION                            // 
 // ======================================================= //
 
-// Retorna o saldo de todas as transações.
+// Returns the balance.
 
 function calculate() {
     let total = 0;
@@ -116,7 +116,7 @@ function calculate() {
 }
 
 
-// Recebe o saldo das transações e retorna a informação de lucro ou prejuízo.
+// Gets the balance and returns profit or loss.
 
 function indicateProfitOrLoss(value) {
     if(value > 0) {
@@ -130,10 +130,10 @@ function indicateProfitOrLoss(value) {
 
 
 // ======================================================= //
-//                PREENCHIMENTO DO RELATÓRIO               // 
+//         FILLING OUT THE TRANSACTIONS STATEMENT          // 
 // ======================================================= //
 
-// Retorna a tabela de transações. Caso não haja transações, retorna o componente "não há transações".
+// Returns the transaction table. If there is no transactions, it returns the "noTransactions" component.
 
 function fillTransactionsArea() {
     const database = loadData();
