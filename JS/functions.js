@@ -41,6 +41,10 @@ function maskNumberToPtBr(value) {
     if(value.length>2) {
         let formattedValue = [value.slice(0, value.length-2), ",", value.slice(value.length-2)].join("");
 
+        if(formattedValue.length > 4 && formattedValue[0] === "0") {
+            formattedValue = formattedValue.slice(1)
+        }
+
         let count = (formattedValue.length-3)-3;
 
         for(let i = formattedValue.length-3; i>0;i--) {
@@ -52,7 +56,7 @@ function maskNumberToPtBr(value) {
 
         return formattedValue;
     }else {
-        return value;
+        return ['0', value];
     }
 }
 
