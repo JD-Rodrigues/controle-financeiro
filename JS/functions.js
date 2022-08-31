@@ -55,6 +55,8 @@ function maskNumberToPtBr(value) {
         }
 
         return formattedValue;
+    }else if (value.length === 1){
+        return ['0', `0${value}`]
     }else {
         return ['0', value];
     }
