@@ -1,5 +1,5 @@
 import { noTransactions, table } from "./components.js";
-import {inputPrice, inputProduct, select} from "./global_and_listeners.js"
+import {inputPrice, inputProduct, select} from "./index.js"
 
 
 // ======================================================= //

@@ -1,5 +1,5 @@
 import { calculate, indicateProfitOrLoss, loadData, maskNumberToPtBr, validatePrice } from "./functions.js";
-import {transactionsSummary} from "./global_and_listeners.js";
+import {transactionsSummary} from "./index.js";
 
 
 // It renders the table structure, containing the first row, the header.
