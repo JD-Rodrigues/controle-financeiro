@@ -101,6 +101,18 @@ function submitTransaction() {
     calculate();
 }
 
+// Asks for confirmation to clean all transactions.
+
+function confirmCleanData() {
+    const data = loadData()
+
+    if (data.length > 0) {
+        confirm('Gostaria de limpar o extrato de transações?') && localStorage.clear();
+    } else {
+        alert('Não há transações.')
+    }
+}
+
 
 // ======================================================= //
 //                      CALCULATION                            // 
@@ -150,4 +162,4 @@ function fillTransactionsArea() {
 
 
 
-export {fillInputPrice, fillTransactionsArea, validatePrice, validateRequiredFields, maskNumberToPtBr, saveData, loadData, submitTransaction, calculate, indicateProfitOrLoss}
+export {fillInputPrice, fillTransactionsArea, validatePrice, validateRequiredFields, maskNumberToPtBr, saveData, loadData, submitTransaction, calculate, indicateProfitOrLoss, confirmCleanData}

@@ -1,4 +1,4 @@
-import { fillInputPrice, fillTransactionsArea, submitTransaction, validateRequiredFields } from "./functions.js";
+import { fillInputPrice, fillTransactionsArea, loadData, submitTransaction, validateRequiredFields, confirmCleanData } from "./functions.js";
 
 const inputPrice = document.querySelector("#form__price");
 const inputProduct = document.querySelector("#form__product-name");
@@ -22,7 +22,7 @@ form.addEventListener("submit", (e) => {
 });
 
 cleanData.addEventListener("click", () => {
-    localStorage.clear();
+    confirmCleanData()
     fillTransactionsArea();
 });
 
