@@ -1,4 +1,4 @@
-import { fillInputPrice, fillTransactionsArea, loadData, submitTransaction, validateRequiredFields, confirmCleanData } from "./functions.js";
+import { fillInputPrice, fillTransactionsArea, submitTransaction, validateRequiredFields, confirmCleanData, showHideMobileMenu } from "./functions.js";
 
 const inputPrice = document.querySelector("#form__price");
 const inputProduct = document.querySelector("#form__product-name");
@@ -26,18 +26,12 @@ cleanData.addEventListener("click", () => {
     fillTransactionsArea();
 });
 
-showMenuMobile.addEventListener("click", () => {
-    menu.classList.toggle("js-show__hide__menu");
-    setTimeout(() => {
-        menu.classList.toggle("js-show__hide__menu--smooth");
-    },0.5);
-});
+showMenuMobile.addEventListener("click", () => showHideMobileMenu());
 
-closeMenu.addEventListener("click", () => {
-    menu.classList.toggle("js-show__hide__menu--smooth");
-    setTimeout(() => {
-        menu.classList.toggle("js-show__hide__menu");
-    },200);
-});
+closeMenu.addEventListener("click", () => showHideMobileMenu());
+
+
+
+
 
 export {inputPrice, inputProduct, form, select, cleanData, transactionsSummary, menu, showMenuMobile, closeMenu}

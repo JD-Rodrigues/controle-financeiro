@@ -1,5 +1,5 @@
 import { noTransactions, table } from "./components.js";
-import {inputPrice, inputProduct, select} from "./index.js"
+import {inputPrice, inputProduct, select, menu} from "./index.js"
 
 
 // ======================================================= //
@@ -159,7 +159,27 @@ function fillTransactionsArea() {
 }
 
 
+// ======================================================= //
+//                         OTHERS                          // 
+// ======================================================= //
+
+// Opens and closes the mobile menu.
+
+function showHideMobileMenu() {
+    if (menu.classList.contains("js-show__hide__menu")) {
+        menu.classList.toggle("js-show__hide__menu--smooth");
+        setTimeout(() => {
+            menu.classList.toggle("js-show__hide__menu");
+        },200);
+    } else {
+        menu.classList.toggle("js-show__hide__menu");
+        setTimeout(() => {
+            menu.classList.toggle("js-show__hide__menu--smooth");
+        },0.5);
+    }
+}
 
 
 
-export {fillInputPrice, fillTransactionsArea, validatePrice, validateRequiredFields, maskNumberToPtBr, saveData, loadData, submitTransaction, calculate, indicateProfitOrLoss, confirmCleanData}
+
+export {fillInputPrice, fillTransactionsArea, validatePrice, validateRequiredFields, maskNumberToPtBr, saveData, loadData, submitTransaction, calculate, indicateProfitOrLoss, confirmCleanData, showHideMobileMenu}
